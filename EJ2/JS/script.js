@@ -24,20 +24,20 @@ $(document).ready(function(){
         }
     })
 
-    /*$(".eliminar").click(function () {
+    $(".eliminar").click(function () {
 
         if(imagenes%7==0 && imagenes>=0){
 
             filas--;
             imagenes--;
-            $("table").remove("#"+ imagenes);
-            $("table").remove("#fila"+ filas);
+            $("#"+ imagenes).remove();
+            $("#fila"+ filas).remove();
             
         }else{
+            $("#"+ imagenes).remove();
             imagenes--;
-            $("#fila"+filas).remove("#"+ imagenes);
 
         }
-    })*/
+    })
 
 });
