@@ -15,29 +15,31 @@ $(document).ready(function(){
         if(imagenes%7==0){
             filas++;
 
-            $("table").append("<tr id=fila"+ filas +"><td id= "+ imagenes +">Hola</td></tr>");
+            $("table").append("<tr id=fila"+ filas +"><td id= "+ imagenes +"><img src='https://loremflickr.com/200/200'></td></tr>");
             
             imagenes++;
         }else{
-            $("#fila"+filas).append("<td id= "+ imagenes +">Hola</td>");
+            $("#fila"+filas).append("<td id= "+ imagenes +"><img src='https://loremflickr.com/200/200'></td>");
             imagenes++;
         }
     })
 
     $(".eliminar").click(function () {
 
-        if(imagenes%7==0 && imagenes>=0){
-
-            filas--;
-            imagenes--;
-            $("#"+ imagenes).remove();
-            $("#fila"+ filas).remove();
+        if (imagenes>=0) {
             
-        }else{
-            $("#"+ imagenes).remove();
             imagenes--;
+            $("#"+imagenes).remove();
+
+            if(imagenes%7==0){
+
+                $("#fila"+ filas).remove();
+                filas--;
+
+            }
 
         }
+        
     })
 
 });
