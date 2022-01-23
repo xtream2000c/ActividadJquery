@@ -1,6 +1,14 @@
+$(document).ready(function () {
+
+    $("#imagen").fadeIn(1000)
+    
+})
+
 
 function cambiaImagen(imagen) {
 
-    document.getElementById("imagen").src=imagen.src;
+    $("#imagen").fadeOut(1000, function () {
+        $("#imagen").attr("src", imagen.src);
+    }).fadeIn(1000);
 
 }
